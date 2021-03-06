@@ -41,4 +41,3 @@ const getMoreQuotes = () =>{
 }
 
 export default App;
-// test test
