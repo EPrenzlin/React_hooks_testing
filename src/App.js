@@ -12,7 +12,6 @@ const [count, setCount] = useState(0)
 const [quotes,getQuotes] = useState([])
 
 useEffect(() => {
-  // this updates the document, kind of like how componentdidmount or component did update does. 
   fetch('http://burli.pythonanywhere.com/shayshay/random?limit=20')
   .then(response => response.json())
   .then(data => getQuotes(data.quotes))
