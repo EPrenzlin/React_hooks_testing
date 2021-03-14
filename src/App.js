@@ -7,18 +7,16 @@ import React, { useState, useEffect } from 'react';
 
 function App() {
 
-const [count, setCount] = useState(0) 
-
 const [quotes,getQuotes] = useState([])
 
 useEffect(() => {
-  fetch('http://burli.pythonanywhere.com/shayshay/random?limit=20')
+  fetch('http://burli.pythonanywhere.com/shayshay/random?limit=5')
   .then(response => response.json())
   .then(data => getQuotes(data.quotes))
 },[])
 
 const getMoreQuotes = () =>{
-  fetch('http://burli.pythonanywhere.com/shayshay/random?limit=20')
+  fetch('http://burli.pythonanywhere.com/shayshay/random?limit=5')
   .then(response => response.json())
   .then(data => getQuotes(data.quotes))
   }
@@ -26,13 +24,9 @@ const getMoreQuotes = () =>{
   return (
     <div> 
     <Container> 
-    <Button onClick={() => setCount(count + 1 )}> 
-      {count}
-    </Button>
     <Button onClick={() => getMoreQuotes()}><br/> 
     <h2> Get more Shay Shay quotes</h2>
     </Button>
-    <h1> You have pressed {count} many times </h1> <br/> 
     {quotes.map(q => <h2> {q} </h2>)}
     </Container>
     </div>
