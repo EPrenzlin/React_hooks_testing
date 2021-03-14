@@ -34,3 +34,5 @@ const getMoreQuotes = () =>{
 }
 
 export default App;
+
+// add in bootstrap formatting for club shay shay
