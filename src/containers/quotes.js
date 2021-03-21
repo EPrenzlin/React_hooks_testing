@@ -5,10 +5,12 @@ class Quotes extends React.Component{
 
 render(){
     return(
-       <Card bg="primary" border="dark">
-           <Card.Text text ="primary">
-            {this.props.quote}
-           </Card.Text>
+       <Card border="dark">
+           <Card.Body text ="primary">
+            <p> 
+        <h4 style={{textAlign :"center"}}>  {this.props.quote} </h4>
+            </p>
+           </Card.Body>
        </Card>
     )
     }

@@ -27,15 +27,16 @@ const getMoreQuotes = () =>{
   
   return (
     <div> 
+      <Container> 
     <Button onClick={() => getMoreQuotes()}><br/> 
     <h2> Get more Shay Shay quotes</h2>
-    </Button>
+    </Button> 
+    </Container>
+    <Container> 
     {quotes.map(q => 
-    <Row md="6">
     <Quotes quote={q}/> 
-    </Row>
     )}
-
+    </Container>
     </div>
     );
 }
