@@ -5,13 +5,13 @@ class Quotes extends React.Component{
 
 render(){
     return(
-       <Card border="dark">
-           <Card.Text>
-               {this.props.quote}
+       <Card bg="primary" border="dark">
+           <Card.Text text ="primary">
+            {this.props.quote}
            </Card.Text>
        </Card>
     )
-}
+    }
 
 }
 

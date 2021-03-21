@@ -31,7 +31,9 @@ const getMoreQuotes = () =>{
     <h2> Get more Shay Shay quotes</h2>
     </Button>
     {quotes.map(q => 
+    <Row md="6">
     <Quotes quote={q}/> 
+    </Row>
     )}
 
     </div>
