@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
+import Card from 'react-bootstrap/Card'
 
 import React, { useState, useEffect } from 'react';
 
@@ -27,7 +28,13 @@ const getMoreQuotes = () =>{
     <Button onClick={() => getMoreQuotes()}><br/> 
     <h2> Get more Shay Shay quotes</h2>
     </Button>
-    {quotes.map(q => <h2> {q} </h2>)}
+    {quotes.map(q => 
+    <Card border='dark' style={{ width: '18rem' }}>
+    <Card.Text> 
+      {q}
+    </Card.Text>
+    </Card>
+    )}
     </Container>
     </div>
     );
