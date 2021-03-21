@@ -3,8 +3,11 @@ import './App.css';
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Card from 'react-bootstrap/Card'
-
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 import React, { useState, useEffect } from 'react';
+
+import Quotes from './containers/quotes' 
 
 function App() {
 
@@ -24,18 +27,13 @@ const getMoreQuotes = () =>{
   
   return (
     <div> 
-    <Container> 
     <Button onClick={() => getMoreQuotes()}><br/> 
     <h2> Get more Shay Shay quotes</h2>
     </Button>
     {quotes.map(q => 
-    <Card border='dark' style={{ width: '18rem' }}>
-    <Card.Text> 
-      {q}
-    </Card.Text>
-    </Card>
+    <Quotes quote={q}/> 
     )}
-    </Container>
+
     </div>
     );
 }
