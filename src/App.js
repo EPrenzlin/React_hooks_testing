@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
+import Navbar from 'react-bootstrap/Navbar'
 import React, { useState, useEffect } from 'react';
 
 import Quotes from './containers/quotes' 
@@ -27,11 +28,16 @@ const getMoreQuotes = () =>{
   
   return (
     <div> 
-      <Container> 
+    <Navbar bg="dark" variant="dark">
+    <Navbar.Brand href="#home">Home</Navbar.Brand>
+    <Navbar.Brand href="#home">Saved Quotes</Navbar.Brand>
+
+  </Navbar>
+  
     <Button onClick={() => getMoreQuotes()}><br/> 
     <h2> Get more Shay Shay quotes</h2>
     </Button> 
-    </Container>
+  
     <Container> 
     {quotes.map(q => 
     <Quotes quote={q}/> 
