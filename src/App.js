@@ -15,13 +15,13 @@ function App() {
 const [quotes,getQuotes] = useState([])
 
 useEffect(() => {
-  fetch('http://burli.pythonanywhere.com/shayshay/random?limit=5')
+  fetch('http://burli.pythonanywhere.com/shayshay/random?limit=3')
   .then(response => response.json())
   .then(data => getQuotes(data.quotes))
 },[])
 
 const getMoreQuotes = () =>{
-  fetch('http://burli.pythonanywhere.com/shayshay/random?limit=5')
+  fetch('http://burli.pythonanywhere.com/shayshay/random?limit=3')
   .then(response => response.json())
   .then(data => getQuotes(data.quotes))
   }
