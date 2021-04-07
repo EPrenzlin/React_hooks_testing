@@ -29,10 +29,9 @@ const getMoreQuotes = () =>{
   return (
     <div> 
     <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="#home">Home</Navbar.Brand>
-    <Navbar.Brand href="#home">Saved Quotes</Navbar.Brand>
-
-  </Navbar>
+    <Navbar.Brand href="/home">Home</Navbar.Brand>
+    <Navbar.Brand href="/saved">Saved Quotes</Navbar.Brand>
+    </Navbar>
   
     <Button onClick={() => getMoreQuotes()}><br/> 
     <h2> Get more Shay Shay quotes</h2>
