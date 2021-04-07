@@ -2,9 +2,11 @@ import { GoogleLogin } from 'react-google-login';
 
 
 function Login(){
-const clientId = "clientId to be fetched out "
+
+const clientId =`${process.env.REACT_APP_CLIENT_ID}.apps.googleusercontent.com`
+
 const responseGoogle = (response) => {
-  console.log(response);
+console.log(response);
 }
 
 return(

@@ -30,7 +30,7 @@ const getMoreQuotes = () =>{
   return (
     <div> 
     <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="/home">Home</Navbar.Brand>
+    <Navbar.Brand href="/">Home</Navbar.Brand>
     <Navbar.Brand href="/saved">Saved Quotes</Navbar.Brand>
     </Navbar>
   
@@ -38,6 +38,7 @@ const getMoreQuotes = () =>{
     <h2> Get more Shay Shay quotes</h2>
     </Button> 
     <Login/>
+
     <Container> 
     {quotes.map(q => 
     <Quotes quote={q}/> 
