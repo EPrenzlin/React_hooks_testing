@@ -10,6 +10,14 @@ import React, { useState, useEffect } from 'react';
 
 import Quotes from './containers/quotes' 
 import Login from './components/login'
+import Saved from './components/saved' 
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
 
@@ -28,12 +36,16 @@ const getMoreQuotes = () =>{
   }
   
   return (
-    <div> 
-    <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="/">Home</Navbar.Brand>
-    <Navbar.Brand href="/saved">Saved Quotes</Navbar.Brand>
-    </Navbar>
-  
+    <div>
+      <Router> 
+  <Navbar bg="light">
+  <Route exact path ="/saved" render={() => {
+    <Saved/>
+  }}> 
+  </Route>
+  </Navbar>
+  </Router>
+
     <Button onClick={() => getMoreQuotes()}><br/> 
     <h2> Get more Shay Shay quotes</h2>
     </Button> 
@@ -50,4 +62,3 @@ const getMoreQuotes = () =>{
 
 export default App;
 
-// add in bootstrap formatting for club shay shay
