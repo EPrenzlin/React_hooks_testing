@@ -8,8 +8,6 @@ import React from 'react'
 
 class Quotes extends React.Component{
 
-
-
 render(){
     return(
        <Card border="dark">
@@ -17,6 +15,7 @@ render(){
             <p> 
             <h4 style={{textAlign :"center"}}> {this.props.quote} </h4>
             <Share url={this.props.quote} />
+            {console.log(this.props.quote)}
             </p>
            </Card.Body>
        </Card>
