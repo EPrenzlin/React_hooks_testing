@@ -1,17 +1,23 @@
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
+import { Share } from 'react-twitter-widgets'
+ 
+
 import React from 'react'
 
 class Quotes extends React.Component{
+
+
 
 render(){
     return(
        <Card border="dark">
            <Card.Body text ="primary">
             <p> 
-            <h4 style={{textAlign :"center"}}>  {this.props.quote} </h4>
-            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            </p>
+            <h4 style={{textAlign :"center"}}> {this.props.quote} </h4>
+            <Share url={this.props.quote} />
+            </p>
            </Card.Body>
        </Card>
     )
