@@ -12,6 +12,7 @@ render(){
             <p> 
             <h4 style={{textAlign :"center"}}>  {this.props.quote} </h4>
             <Button variant="success"> Like</Button>{' '}
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </p>
            </Card.Body>
        </Card>
