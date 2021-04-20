@@ -31,9 +31,11 @@ const getMoreQuotes = () =>{
   
   return (
     <div>
-    <Button onClick={() => getMoreQuotes()}><br/> 
-    <h2> Get more Shay Shay quotes</h2>
+      <Container> 
+    <Button onClick={() => getMoreQuotes()} block><br/> 
+    <h2> Get more Shannon Sharpe quotes</h2>
     </Button> 
+    </Container>
     <Container> 
     {quotes.map(q => 
     <Quotes quote={q}/> 
