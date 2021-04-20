@@ -9,8 +9,6 @@ import Navbar from 'react-bootstrap/Navbar'
 import React, { useState, useEffect } from 'react';
 
 import Quotes from './containers/quotes' 
-import Login from './components/login'
-import Saved from './components/saved' 
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -36,9 +34,6 @@ const getMoreQuotes = () =>{
     <Button onClick={() => getMoreQuotes()}><br/> 
     <h2> Get more Shay Shay quotes</h2>
     </Button> 
-    <Login/>
-
-
     <Container> 
     {quotes.map(q => 
     <Quotes quote={q}/> 
