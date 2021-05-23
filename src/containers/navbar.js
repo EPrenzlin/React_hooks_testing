@@ -1,21 +1,17 @@
-import Navbar from 'react-bootstrap/Navbar'
+import React,{Component} from 'react' 
 import Nav from 'react-bootstrap/Nav'
 
-import React from 'react'
-
-
-class NavBar extends React.Component{
-
-render(){
-    return(
-<Navbar bg="dark" variant="dark">
-    <Nav className="mr-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="/Liked">Liked Posts</Nav.Link>
-    </Nav>
-</Navbar>
-
-    )}
+export default class NavBar extends Component{
+    render(){
+        return(
+            <Nav className="justify-content-center" activeKey="/home">
+            <Nav.Item>
+              <Nav.Link href="/home">All Quotes</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="/liked">Liked Quotes</Nav.Link>
+            </Nav.Item>
+          </Nav>
+        )
+    }
 }
-
-export default NavBar 

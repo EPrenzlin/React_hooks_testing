@@ -10,6 +10,7 @@ import React, { useState, useEffect } from 'react';
 
 import Quotes from './containers/quotes' 
 import Navbar from './containers/navbar' 
+import Liked from './containers/likedQuotes' 
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -33,15 +34,14 @@ const getMoreQuotes = () =>{
   return (
     <div>
       <Navbar/> 
+        <Router>
+        <Route exact path ="/liked" render={ () => <Liked/>} /> 
+        <Route exact path ="/home" render={ () => quotes.map(q => <Quotes quote ={q}/> ) } /> 
+        </Router>
       <Container> 
     <Button onClick={() => getMoreQuotes()} block><br/> 
     <h2> Get more Shannon Sharpe quotes</h2>
     </Button> 
-    </Container>
-    <Container> 
-    {quotes.map(q => 
-    <Quotes quote={q}/> 
-    )}
     </Container>
     </div>
     );
