@@ -1,3 +1,7 @@
+# Club Shay Shay
+I'm a big fan of theh Fox Morning Sports show, Undisputed : Skip and Shannon. This project was a combination of testing out React Hooks, and paying homage to Shanon Sharpe's quotes. Simply clone this repostitory, type in "npm start" in the termainal after cd'ing into the correct directory, and it's running. Functionality includes being able to share the particular quotes onto Twitter. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
