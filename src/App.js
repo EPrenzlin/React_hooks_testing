@@ -5,10 +5,11 @@ import Container from 'react-bootstrap/Container'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-import Navbar from 'react-bootstrap/Navbar'
+// import Navbar from 'react-bootstrap/Navbar'
 import React, { useState, useEffect } from 'react';
 
 import Quotes from './containers/quotes' 
+import Navbar from './containers/navbar' 
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -31,6 +32,7 @@ const getMoreQuotes = () =>{
   
   return (
     <div>
+      <Navbar/> 
       <Container> 
     <Button onClick={() => getMoreQuotes()} block><br/> 
     <h2> Get more Shannon Sharpe quotes</h2>
